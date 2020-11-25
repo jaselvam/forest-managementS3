@@ -1,33 +1,33 @@
 const initialstate = {    
-    employees: [    
-        { id: 1, employeeName: "Employee 1", employeeDepartment: ".NET Team" },    
-        { id: 2, employeeName: "Employee 2", employeeDepartment: "Mobile Team" },    
-        { id: 3, employeeName: "Employee 3", employeeDepartment: "Design Team" }    
+    admins: [    
+        { id: 1, adminName: "Janani panneer selvam", adminPassword: "janani@123" },    
+        { id: 2, adminName: "Karthika panneer selvam", adminPassword: "karthika@123" },    
+        { id: 3, adminName: "Panneer selvam", adminPassword: "selvam@123" }    
     ]    
 };    
     
 const reducer = (state = initialstate, action) => {    
     switch (action.type) {    
-        case 'GET_EMPLOYEE':    
+        case 'GET_ADMIN':    
             return {    
                 ...state    
             };    
-        case 'ADD_EMPLOYEE':    
+        case 'ADD_ADMIN':    
             return {    
                 ...state,    
-                employees: state.employees.concat(action.payload)    
+                admins: state.admins.concat(action.payload)    
             };    
-        case 'EDIT_EMPLOYEE':    
+        case 'EDIT_ADMIN':    
             return {    
                 ...state,    
-                employees: state.employees.map(    
-                    (content, i) => content.id === action.payload.id ? {...content, employeeName : action.payload.employeeName ,  employeeDepartment : action.payload.employeeDepartment }    
+                admins: state.admins.map(    
+                    (content, i) => content.id === action.payload.id ? {...content, adminName : action.payload.adminName ,  adminPassword : action.payload.adminPassword }    
                                             : content)    
             };    
-        case 'DELETE_EMPLOYEE':    
+        case 'DELETE_ADMIN':    
             return {    
                 ...state,    
-                employees: state.employees.filter(item => item.id !== action.payload)    
+                admins: state.admins.filter(item => item.id !== action.payload)    
             };    
         default:    
             return state;    

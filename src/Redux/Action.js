@@ -1,34 +1,34 @@
-export function getEmployee() {  
+export function getAdmin() {  
     return dispatch => {  
         return dispatch({  
-            type: 'GET_EMPLOYEE'  
+            type: 'GET_ADMIN'  
         });  
     }  
 };  
   
-export function addEmployee(data) {  
+export function addAdmin(data) {  
     return dispatch => {  
         return dispatch({  
-            type: 'ADD_EMPLOYEE',  
+            type: 'ADD_ADMIN',  
             payload: data  
         });  
     }  
 };  
   
-export function editEmployee(data) {  
+export function editAdmin(data) {  
     return dispatch => {  
         return dispatch({  
-            type: 'EDIT_EMPLOYEE',  
+            type: 'EDIT_ADMIN',  
             payload: data  
         });  
     }  
 };  
   
-export function deleteEmployee(employeeId) {  
+export function deleteAdmin(adminId) {  
     return dispatch => {  
         return dispatch({  
-            type: 'DELETE_EMPLOYEE',  
-            payload: employeeId  
+            type: 'DELETE_ADMIN',  
+            payload: adminId  
         });  
     }  
 }; 
